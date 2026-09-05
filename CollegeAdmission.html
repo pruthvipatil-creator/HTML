@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>College Admission Registeration Form</title>
+    </head>
+    <body>
+        <h1 align="center">COLLEGE ADMISSION</h1>
+        <h2 align="center">STUDENT REGISTERATION FORM</h2>
+
+        <form>
+            <fielset>
+                <legend><b>personal information</b></legend>
+                <label>Student Name:</label>
+                <input type="text" name="studentName">
+                <br><br>
+
+                <label>Father Name:</label>
+                <input type="text" name="fatherName">
+                <br><br>
+
+                <label>Mother Name:</label>
+                <input type="text" name="motherName"> 
+                <br><br>
+
+                <label>Date of Birth:</label>
+                <input type="date" name="dob">
+                <br><br>
+
+                <label>Gender:</label>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+                <br><br>
+
+                <label>Email:</label>
+                <input type="email" name="email">
+                <br><br>
+                <label>Mobile Number:</label>
+                <input type="tel" name="mobileNumber">
+                <br><br>
+            </fielset>
+
+                    <br>
+
+                    <fieldset>
+                        <legend><b>Admission Details</b></legend>
+                        <label>Course:</label>
+                        <select name="course">
+                            <option>BCA</option>
+                            <option>B.sc</option>
+                            <option>B.com</option>
+                            <option>B.A</option>
+                            <option>B.Ed</option>
+                        </select>
+                        <br><br>
+
+                        <label>Deparment:</label>
+                        <select name="department">
+                            <option>Computer Science</option>
+                            <option>Mathematics</option>
+                            <option>Physics</option>
+                            <option>Commerce</option>
+                            <option>English</option>
+                        </select>
+                        <br><br>
+
+                        <label>Previous Qualification:</label>
+                        <input type="text" name="Qualification">
+                        <br><br>
+
+                        <label>Percentage:</label>
+                        <input type="number" name="percentage">
+                        <br><br>
+
+                    </fieldset>
+                    <legend><b>Address Details</b></legend>
+                    <label>Address:</label>
+                    <textarea name="address" rows="4" cols="40"></textarea>
+                    <br><br>
+
+                    <label>City:</label>
+                    <input type="text" name="city">
+                    <br><br>
+
+                    <label>State:</label>
+                    <input type="text" name="state">
+                    <br><br>
+
+                    <label>PIN Code:</label>
+                    <input type="text" name="pinCode">
+                    <br><br>
+
+                </fieldset>
+
+                <br>
+
+                <center>
+                    <input type="submit" value="Register">
+                    <input type="reset" value="clear">
+                </center>
+
+            </form>
+        </body>
+        </html>
