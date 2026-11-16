@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Marks</title>
+</head>
+
+<body>
+
+    <h1>Student Marks</h1>
+
+    <form>
+        <label>Student Name:</label>
+        <input type="text" id="name"><br><br>
+
+        <label>Student Marks:</label>
+        <input type="number" id="marks"><br><br>
+
+        <button type="button" onclick="insertData()">
+            Insert Data
+        </button>
+
+        <button type="button" onclick="displayData()">
+            Display Data
+        </button>
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+
+        let students = [];
+
+        function Student(name, marks) {
+            this.name = name;
+            this.marks = marks;
+        }
+
+        function insertData() {
+
+            let name = document.getElementById("name").value;
+            let marks = document.getElementById("marks").value;
+
+            students.push(new Student(name, marks));
+
+            document.getElementById("result").innerHTML =
+                "Data inserted successfully!";
+
+        }
+
+        function displayData() {
+
+            let result = "";
+
+            for (let i = 0; i < students.length; i++) {
+
+                result += "Name: " + students[i].name +
+                          ", Marks: " + students[i].marks + "<br>";
+
+            }
+
+            document.getElementById("result").innerHTML = result;
+
+        }
+
+    </script>
+
+</body>
+</html>

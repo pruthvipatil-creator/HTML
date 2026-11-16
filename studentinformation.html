@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information System</title>
+</head>
+<body>
+
+    <h1>Student Information System</h1>
+
+    <button onclick="createStudents()">Create Students</button>
+
+    <button onclick="displayStudents()">Display Students</button>
+
+    <div id="result"></div>
+
+    <script>
+
+        function Student(name, rollnumber, grade) {
+            this.name = name;
+            this.rollnumber = rollnumber;
+            this.grade = grade;
+
+            this.displayInfo = function() {
+                return `Name: ${this.name}, Roll Number: ${this.rollnumber}, Grade: ${this.grade}`;
+            };
+        }
+
+        let students = [];
+
+        function createStudents() {
+            students.push(new Student("John Doe", 1, "A"));
+            students.push(new Student("John Doe", 2, "B"));
+            students.push(new Student("Bomb Smith", 3, "A"));
+        }
+
+        function displayStudents() {
+            let result = "";
+
+            for (let student of students) {
+                result += student.displayInfo() + "<br>";
+            }
+
+            document.getElementById("result").innerHTML = result;
+        }
+
+    </script>
+
+</body>
+</html>
